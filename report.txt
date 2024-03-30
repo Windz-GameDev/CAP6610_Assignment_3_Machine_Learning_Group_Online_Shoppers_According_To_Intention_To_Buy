@@ -1,0 +1,22 @@
+Question - Report which model, K-means or Complete-Linkage AGNES, is better considering
+their RI scores. 
+
+Answer - Using equal k values, the two models retrieving the following Rand Indexes.
+
+K Means Rand Index: 0.6150412418856708
+Complete Linkage Agglomerative Clustering Rand Index: 0.7377097378266066
+
+What this means: 
+
+The examples that were in a different or the same cluster as every other example in the dataset 
+were more likely and more frequently correctly predicted as being in the same cluster or different cluster respectively 
+in the Complete Linkage Agglomerative Clustering model. In other words, this means for each pair, if they shared a cluster in the ground truth clusters, 
+a correct prediction by a model would have them share the same cluster in the new clustering. The same idea goes for the opposite where they do not share a cluster in 
+the ground truth, a correct prediction by model would place them in different clusters in the new clustering. 
+
+The Rand Index, according to sklearn is calculated as follows:
+
+RI = (number of agreeing pairs) / number of pairs
+
+In conclusion, Complete Linkage Agglomerative Clustering had the superior ratio of correctly predicted pairs to the total number of pair predictions compared to KMeans.
+Therefore, according to the Rand Index metric, it is the better model.
